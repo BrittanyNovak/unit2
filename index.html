@@ -5,9 +5,10 @@
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>First Mobile Website</title>
 			<link href="css/bootstrap.css" rel="stylesheet">
+			<link href="css/main.css" rel="stylesheet">
 		</head>
 		
-		<body>
+		<body onload="javascript:getTasks()">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
@@ -32,14 +33,24 @@
 		</nav>
 			
 			<div class="container">
-				<div style="padding: 40px 15px; text-align:center;">
-					<h1>Hello World</h1>
-					<p class="lead">This is my Hello World App.</p>
+				<div class="itt_main">
+					<label class="input-group">	
+					<input class="form-control" id="newTask" type="text" placeHolder="NewTask"></input>
+					<span class="input-group-btn">
+						<button onclick="javascript:addTask()" class="btn btn-primary" type="button">Add</button>
+					</span>
+					</label>
 				</div>
+			</div>
+			
+			<div class="container">
+				<ul id="listTask" class="list-group">
+				</ul>
 			</div>
 			
 				<script src="js/jquery-2.1.4.js"></script>
 				<script src="js/bootstrap.js"></script>
+				<script src="js/application.js"></script>
 				
 		</body>
 	</html>
